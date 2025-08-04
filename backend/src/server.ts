@@ -8,7 +8,7 @@ dotenv.config();
 const app: Application = express();
 
 // Middleware
-app.use(cors({ origin: "https://quiz-app-fe-h98s.onrender.com/" }));
+app.use(cors({ origin: "https://quiz-app-fe-h98s.onrender.com" }));
 app.use(express.json());
 
 // MongoDB Connection
