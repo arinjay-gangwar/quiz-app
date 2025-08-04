@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     if (isEmailValid) {
       axios
-        .get<Question[]>("http://localhost:5000/api/quiz")
+        .get<Question[]>("https://quiz-app-be-i5c4.onrender.com/api/quiz")
         .then((res) => setQuestions(res.data))
         .catch((err) => console.error("Error fetching quiz:", err));
     }
@@ -45,10 +45,13 @@ function App() {
     }));
 
     try {
-      const res = await axios.post("http://localhost:5000/api/quiz", {
-        email,
-        answers: formattedAnswers,
-      });
+      const res = await axios.post(
+        "https://quiz-app-be-i5c4.onrender.com/api/quiz",
+        {
+          email,
+          answers: formattedAnswers,
+        }
+      );
       setScore(res.data.score);
       setSubmitted(true);
     } catch (error) {
