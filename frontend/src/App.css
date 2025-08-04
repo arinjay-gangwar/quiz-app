@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  width: fit-content;
+}
+
+input {
+  border-radius: 8px;
+}
+
+.quiz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.submit-btn {
+  margin-top: 20px;
+}
