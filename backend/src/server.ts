@@ -72,9 +72,7 @@ app.get("/auth/callback", async (req: Request, res: Response) => {
     // Redirect into your embedded React app
     const session = callbackResponse.session;
     const host = (req.query.host as string) || "";
-    res.redirect(
-      `https://quiz-app-be-i5c4.onrender.com/auth/callback?shop=${session.shop}&host=${host}`
-    );
+    res.redirect(`${process.env.HOST}?shop=${session.shop}&host=${host}`);
   } catch (error: any) {
     console.error(`OAuth callback error: ${error.message}`);
     res.status(400).send(error.message);
