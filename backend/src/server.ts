@@ -34,7 +34,7 @@ app.use(
 
 app.use(
   cors({
-    origin: '*',
+    origin: process.env.HOST,
     credentials: true,
   })
 );
